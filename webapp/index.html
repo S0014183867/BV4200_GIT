@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>WebApp_BV4200_01_test</title>
+
+		<script id="sap-ui-bootstrap"
+			src="../../resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-resourceroots='{"sap.ui.bootcampWebApp_BV4200_01": ""}'>
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<!--<script>-->
+		<!--	sap.ui.getCore().attachInit(function() {-->
+		<!--		new sap.m.Shell({-->
+		<!--			app: new sap.ui.core.ComponentContainer({-->
+		<!--				height : "100%",-->
+		<!--				name : "sap.ui.bootcampWebApp_BV4200_01"-->
+		<!--			})-->
+		<!--		}).placeAt("content");-->
+		<!--	});-->
+		<!--</script>-->
+		
+		<script>
+			sap.ui.getCore().attachInit(function () {
+				new sap.m.Text({
+					text : "Hello World dot Index!"
+				}).placeAt("content");
+				
+			});
+		</script>
+	</head>
+
+	<body class="sapUiBody" id="content">
+		<!--<p>Hello World!!</p>-->
+		<script>
+			sap.ui.getCore().attachInit(function () {
+				new sap.m.Text({
+					text : "Username"
+				}).placeAt("content");
+				
+				new sap.m.Input({maxLength: 15}).placeAt("content");
+				
+				var passwordText = new sap.m.Text({
+					text : "Password"
+				}).placeAt("content");
+				
+				
+				new sap.m.Input( {maxLength: 15
+				}).placeAt("content");	
+				
+				new sap.m.Button({text : "Login"}).placeAt("content");
+				
+				// resource roots sa taas + View name
+				new sap.ui.xmlview({
+					viewName: "sap.ui.bootcampWebApp_BV4200_01.view.BV4200_View_01"
+				}).placeAt("content");
+			});
+		</script>
+	</body>
+	
+
+</html>
