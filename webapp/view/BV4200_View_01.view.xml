@@ -8,41 +8,55 @@
 <!--		</pages>-->
 <!--	</App>-->
 <!--</mvc:View>-->
-
-	<mvc:View
-		controllerName="sap.ui.bootcampWebApp_BV4200_01.controller.BV4200_View_01"
-		xmlns="sap.m"
-		xmlns:mvc="sap.ui.core.mvc"
-		xmlns:rm="sap/ui/model/resource/ResourceModel">
-		<Text text = "Hello World dot View"/>
-		<Text text = "Username"/>
-
-		<!--{} means nagbbind from data model-->
-		<Input 
-			maxLength="15" 
-			width="98%" 
-			value="{/field/username}" 
-			description="Hellost {/field/username}"
-			valueLiveUpdate="true"
-			type="Text" 
-			id="username">
-		</Input>
-		
-		<Text text = "Password"/>
-				
-		<Input type="Password" id="password">
-		</Input>
-		
-			
-		<!--original-->
-		<!--<Button text = "Login" press="onLoginPress">-->
-		<!--</Button>-->
-		
-		<Button text = "{i18n>loginButtonText}" press="onLoginPress">
-		</Button>
-
-		
-		
-		
-		
-	</mvc:View>
+<mvc:View controllerName="sap.ui.bootcampWebApp_BV4200_01.controller.BV4200_View_01" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:rm="sap/ui/model/resource/ResourceModel" displayBlock="true">
+	<App class="sapui5BootcampWT">
+		<pages>
+		<!--sap.m.App lang pwede mag-contain sa page-->
+			<Page title="{i18n>homePageTitle}">
+				<content>
+					<!--<Panel expandable="true" headerText="{i18n>loginPanelTitle}" class="sapUiResponsiveMargin" width="auto">-->
+					<Panel expandable="true" headerText="{i18n>loginPanelTitle}" class="sapUiResponsiveContentPadding" width="auto">
+						<content>
+							<Text text="Hello World dot View"/>
+							<Text text="Username" class="sapThemeHighlight-asColor myCustomText"/>
+							<!--<Input maxLength="15" width="98%" value="{/field/username}" description="Hellost {/field/username}" valueLiveUpdate="true" type="Text"-->
+							<Input maxLength="15" value="Hey" type="Text" id="username"></Input>
+							<Text text="Password"/>
+							<Input type="Password" id="password"></Input>
+							<!--<Button text="Login" press="onLoginPress"></Button>-->
+							<!--<Button text="{i18n>loginButtonText}" press="onLoginPress" class="sapUiLargeMarginTop"></Button>-->
+							<Button text="{i18n>loginButtonText}" press="onLoginPress" class="myCustomButton"></Button>							
+						</content>
+					</Panel>
+					
+				</content>
+				<!--<footer>-->
+				<!--	<content>-->
+				<!--	<Text text="Footer Text"/>-->
+				<!--	</content>-->
+				<!--</footer>-->
+			</Page>
+		</pages>
+	</App>
+	<!--<Text text = "Hello World dot View"/>-->
+	<!--<Text text = "Username"/>-->
+	<!--{} means nagbbind from data model-->
+	<!--<Input -->
+	<!--	maxLength="15" -->
+	<!--	width="98%" -->
+	<!--	value="{/field/username}" -->
+	<!--	description="Hellost {/field/username}"-->
+	<!--	valueLiveUpdate="true"-->
+	<!--	type="Text" -->
+	<!--	id="username">-->
+	<!--</Input>-->
+	<!--<Text text = "Password"/>-->
+	<!--<Input type="Password" id="password">-->
+	<!--</Input>-->
+	<!--original-->
+	<!--<Button text = "Login" press="onLoginPress">-->
+	<!--</Button>-->
+	<!--<Button text = "{i18n>loginButtonText}" press="onLoginPress">-->
+	<!--</Button>-->
+</mvc:View>
